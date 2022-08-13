@@ -5,18 +5,26 @@
         {% block title %} {% endblock %}
     </title>
     {% include 'utilities/headers/header.htm' %}
+
+    {% block stylesheet %} {% endblock %}
+    {% block top_scripts %} {% endblock %}
+
 </head>
 
 <body>
+
     {% include 'utilities/top-announcement/top-announcement.htm' %}
     {% include 'utilities/top-navigation/top-navigation.htm' %}
-
 
     {% block content %}
 
     {% endblock %}
 
     {% include 'utilities/footers/footer.htm' %}
+
+    {% include 'utilities/scroll-to-top/scroll-to-top.htm' %}
+
+    {% block bottom_scripts %} {% endblock %}
 </body>
 
 </html>
