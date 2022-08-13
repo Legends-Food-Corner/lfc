@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    {% include 'utilities/headers/header.htm' %}
+</head>
+
+<body>
+    {% include 'utilities/top-navigation/top-navigation.htm' %}
+
+    <div class="container-fluid">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    {% include 'utilities/footers/footer.htm' %}
+</body>
+
+</html>

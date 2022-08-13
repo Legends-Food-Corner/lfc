@@ -1,0 +1,9 @@
+:root {
+    --color-primary: #123;
+    --color-secondary: #234;
+    --color-background: #f00;
+    --color-surface: #000;
+    --color-success: green;
+    --color-error: red;
+    --color-disabled: #345;
+}

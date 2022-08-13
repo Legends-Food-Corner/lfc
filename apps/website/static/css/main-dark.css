@@ -1,0 +1,11 @@
+:root {
+    --color-primary: #123;
+    --color-secondary: #234;
+    --color-background: #121212;
+    --color-surface: #fff;
+    --color-success: green;
+    --color-error: red;
+    --color-disabled: #345;
+}
+
+@import url('style.css');
