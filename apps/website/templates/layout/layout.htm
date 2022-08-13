@@ -8,13 +8,13 @@
 </head>
 
 <body>
+    {% include 'utilities/top-announcement/top-announcement.htm' %}
     {% include 'utilities/top-navigation/top-navigation.htm' %}
 
-    <div class="container-fluid">
-        {% block content %}
 
-        {% endblock %}
-    </div>
+    {% block content %}
+
+    {% endblock %}
 
     {% include 'utilities/footers/footer.htm' %}
 </body>

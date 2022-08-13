@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index/index.htm")
+    return render_template("home/home.htm")
 
 
 @app.errorhandler(404)

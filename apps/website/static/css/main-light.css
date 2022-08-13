@@ -1,9 +1,33 @@
 :root {
     --color-primary: #123;
     --color-secondary: #234;
-    --color-background: #f00;
+    --color-background: #fff;
     --color-surface: #000;
     --color-success: green;
     --color-error: red;
+    --color-alert: orange;
     --color-disabled: #345;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: var(--color-background);
+}
+
+.top-announcement-wrapper {
+    padding: 12px;
+    font-weight: 600;
+    background-color: var(--color-alert);
+    color: white;
+}
+
+.footer-wrapper {
+    background-color: var(--color-disabled);
+    height: 400px;
+}
+
+.home-jumbotron-wrapper {
+    height: 33vh;
+    background-color: var(--color-surface);
 }
