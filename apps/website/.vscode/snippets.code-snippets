@@ -48,5 +48,13 @@
 			"{% endblock %}"
 		],
 		"description": "Add Multiline block in template"
+	},
+	"Include template": {
+		"scope": "html",
+		"prefix": "include-template",
+		"body": [
+			"{% include '${1:template_url}' %}",
+		],
+		"description": "Include template"
 	}
 }

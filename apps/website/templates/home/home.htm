@@ -6,15 +6,16 @@ Home
 
 {% block stylesheet %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/utilities/trending-dishes.css') }}">
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid home-jumbotron-wrapper">
     <div class="jumbotron-gradient">
         <div class="container">
-            <div class="row">
+            <div class="row" style="margin-top: 80px;">
                 <div class="col">
-                    <div class="title">
+                    <div class="title animate__animated animate__backInRight">
                         <div>Legends</div>
                         <div>Foods</div>
                         <div>Corner</div>
@@ -31,4 +32,10 @@ Home
         </div>
     </div>
 </div>
+<div class="container-fluid main-section-wrapper" id="main">
+    <div class="container">
+        {% include 'utilities/trending-dish/trending-dish.htm' %}
+    </div>
+</div>
+
 {% endblock %}

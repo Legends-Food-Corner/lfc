@@ -1,0 +1,31 @@
+.trending-dishes-wrapper {
+    margin-top: var(--padding-extra-large);
+    margin-bottom: var(--padding-extra-large);
+}
+
+.dish-image {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.dish-heading {
+    font-weight: 700;
+    font-size: x-large;
+    color: var(--color-grey);
+}
+
+.dish-category {
+    font-weight: 700;
+    color: var(--color-grey);
+    font-size: large;
+}
+
+.dish-shop {
+    font-weight: 700;
+    color: var(--color-grey);
+    font-size: small;
+}
+
+.dish-rating {
+    color: var(--color-primary);
+}

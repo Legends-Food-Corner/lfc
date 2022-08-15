@@ -1,7 +1,9 @@
-function hide(e) {
+function hide(id) {
+    let e = document.getElementById(id);
     e.style.display = 'none';
 }
 
-function show(e) {
+function show(id) {
+    let e = document.getElementById(id);
     e.style.display = 'block';
 }

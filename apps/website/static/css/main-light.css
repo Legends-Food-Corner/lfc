@@ -1,12 +1,18 @@
 :root {
-    --color-primary: #123;
-    --color-secondary: #234;
+    --color-primary: #fc8019;
+    --color-secondary: #fff;
     --color-background: #fff;
     --color-surface: #000;
     --color-success: green;
     --color-error: red;
     --color-alert: orange;
-    --color-disabled: #345;
+    --color-grey: #777;
+    --color-disabled: #d3d3d3;
+
+    --padding-small: 6px;
+    --padding-medium: 12px;
+    --padding-large: 16px;
+    --padding-extra-large: 24px;
 
     scroll-behavior: smooth;
 }
@@ -26,8 +32,17 @@ body {
 }
 
 .custom-navbar {
-    position: sticky;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: auto;
     top: 0;
+    z-index: 9999;
+}
+
+.navbar {
+    background-color: var(--color-background);
+    box-shadow: 0 6px 6px var(--color-grey);
 }
 
 .footer-wrapper {
@@ -35,8 +50,46 @@ body {
     height: 400px;
 }
 
-.scroll-to-top-wrapper {
+.scroll-to-top-wrapper a {
     position: fixed;
     right: 24px;
     bottom: 24px;
+    font-size: 48px;
+    color: var(--color-alert);
+}
+
+a,
+a:visited,
+a:active,
+a:link {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.custom-card {
+    margin-top: var(--padding-extra-large);
+    background-color: var(--color-background);
+    box-shadow: 0 6px 8px var(--color-disabled);
+    border-radius: 16px;
+    padding-bottom: var(--padding-large);
+}
+
+.custom-card-body {
+    padding: var(--padding-extra-large);
+}
+
+.custom-card-footer {
+    padding: var(--padding-small) var(--padding-extra-large);
+}
+
+.custom-btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.custom-btn-outline {
+    background-color: var(--color-disabled);
+    color: var(--color-secondary);
+    font-weight: 600;
 }
