@@ -13,7 +13,7 @@
 }
 
 .main-section-wrapper {
-    background: var(--color-background);
+    background: var(--color-primary);
     color: var(--color-surface);
 }
 
@@ -28,7 +28,7 @@
 
 .title {
     padding: 24px;
-    color: white;
+    color: var(--color-primary);
     font-size: 8vw;
     font-weight: 700;
 }
@@ -55,7 +55,7 @@
 @media only screen and (max-width: 600px) {
     .title {
         padding: 24px;
-        color: white;
+        color: var(--color-primary);
         font-size: 20vw;
         font-weight: 700;
     }

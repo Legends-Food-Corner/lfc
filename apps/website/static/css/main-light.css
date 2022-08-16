@@ -1,12 +1,12 @@
 :root {
-    --color-primary: #fc8019;
-    --color-secondary: #fff;
-    --color-background: #fff;
-    --color-surface: #000;
+    --color-primary: #fff;
+    --color-secondary: #000;
+    --color-accent: #fc8019;
+
     --color-success: green;
     --color-error: red;
     --color-alert: orange;
-    --color-grey: #777;
+    --color-shadow: #777;
     --color-disabled: #d3d3d3;
 
     --padding-small: 6px;
@@ -20,7 +20,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: var(--color-background);
+    background: var(--color-primary);
     overflow-x: hidden;
 }
 
@@ -41,8 +41,8 @@ body {
 }
 
 .navbar {
-    background-color: var(--color-background);
-    box-shadow: 0 6px 6px var(--color-grey);
+    background-color: var(--color-primary);
+    box-shadow: 0 6px 6px var(--color-shadow);
 }
 
 .footer-wrapper {
@@ -62,14 +62,14 @@ a,
 a:visited,
 a:active,
 a:link {
-    color: var(--color-primary);
+    color: var(--color-accent);
     text-decoration: none;
 }
 
 .custom-card {
     margin-top: var(--padding-extra-large);
-    background-color: var(--color-background);
-    box-shadow: 0 6px 8px var(--color-disabled);
+    background-color: var(--color-primary);
+    box-shadow: 0 6px 8px var(--color-shadow);
     border-radius: 16px;
     padding-bottom: var(--padding-large);
 }
@@ -83,13 +83,15 @@ a:link {
 }
 
 .custom-btn-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: var(--color-secondary);
     font-weight: 600;
+    width: 100%;
 }
 
 .custom-btn-outline {
     background-color: var(--color-disabled);
     color: var(--color-secondary);
     font-weight: 600;
+    width: 100%;
 }
