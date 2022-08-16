@@ -1,8 +1,9 @@
 :root {
     --color-primary: #fff;
-    --color-secondary: #000;
+    --color-secondary: #333;
     --color-accent: #fc8019;
 
+    --color-favourite: rgb(238, 53, 53);
     --color-success: green;
     --color-error: red;
     --color-alert: orange;
@@ -72,6 +73,11 @@ a:link {
     box-shadow: 0 6px 8px var(--color-shadow);
     border-radius: 16px;
     padding-bottom: var(--padding-large);
+    transition: all 0.5s;
+}
+
+.custom-card:hover {
+    box-shadow: 0 6px 16px var(--color-shadow);
 }
 
 .custom-card-body {
@@ -84,14 +90,29 @@ a:link {
 
 .custom-btn-primary {
     background-color: var(--color-accent);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-weight: 600;
     width: 100%;
 }
 
+
 .custom-btn-outline {
     background-color: var(--color-disabled);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-weight: 600;
     width: 100%;
+}
+
+.custom-btn-primary:hover,
+.custom-btn-outline:hover {
+    color: var(--color-primary);
+}
+
+
+.div-horizontal-scrolling {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: var(--padding-large);
 }
