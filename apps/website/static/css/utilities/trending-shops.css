@@ -1,0 +1,11 @@
+.shop-card-wrapper {
+    min-width: 300px;
+    width: 20vw;
+    display: inline-block;
+    margin-right: var(--padding-extra-large);
+}
+
+.shop-card-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+}

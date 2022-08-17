@@ -10,34 +10,34 @@
     margin-right: var(--padding-extra-large);
 }
 
-.dish-image {
+.dish-wrapper .dish-image {
     width: 100%;
     border-radius: 12px 12px 12px 12px;
 }
 
-.dish-heading {
+.dish-wrapper .dish-heading {
     font-weight: 700;
     font-size: x-large;
     color: var(--color-secondary);
 }
 
-.dish-category {
+.dish-wrapper .dish-category {
     font-weight: 700;
     color: var(--color-secondary);
     font-size: large;
 }
 
-.dish-shop {
+.dish-wrapper .dish-shop {
     font-weight: 700;
     color: var(--color-secondary);
     font-size: small;
 }
 
-.dish-rating {
+.dish-wrapper .dish-rating {
     color: var(--color-accent);
 }
 
-.dish-fav {
+.dish-wrapper .dish-fav {
     position: absolute;
     right: var(--padding-extra-large);
     top: var(--padding-extra-large);
@@ -48,7 +48,7 @@
     padding: var(--padding-medium);
 }
 
-.dish-image-overlay {
+.dish-wrapper .dish-image-overlay {
     position: absolute;
     bottom: 0;
     left: 0;

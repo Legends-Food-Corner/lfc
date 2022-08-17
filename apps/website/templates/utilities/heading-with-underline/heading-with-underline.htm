@@ -1,5 +1,9 @@
+{% macro heading_with_underline(title="") %}
+
 <div class="row">
     <div class="col">
-        <h3><span id="heading-title"></span></h3>
+        <h3><span id="heading-title">{{title}}</span></h3>
     </div>
 </div>
+
+{% endmacro %}

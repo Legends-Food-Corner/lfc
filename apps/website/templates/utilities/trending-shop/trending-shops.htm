@@ -1,12 +1,12 @@
-{% from "utilities/trending-dish/trending-dish-card.htm" import trending_dish_card with context %}
+{% from "utilities/trending-shop/trending-shop-card.htm" import trending_shop_card with context %}
 {% from "utilities/heading-with-underline/heading-with-underline.htm" import heading_with_underline with context %}
 
 <div class="trending-dishes-wrapper">
-    {{ heading_with_underline("Trending Dishes") }}
+    {{ heading_with_underline("Trending Shops") }}
     <div class="row">
         <div class="col div-horizontal-scrolling">
             {% for i in range(10) %}
-            {{ trending_dish_card("","Cheese Pizza","Pizza","","Dominos") }}
+            {{ trending_shop_card() }}
             {% endfor %}
         </div>
     </div>

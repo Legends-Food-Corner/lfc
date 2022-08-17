@@ -15,7 +15,28 @@
     --padding-large: 16px;
     --padding-extra-large: 24px;
 
+    --border-radius: 16px;
+
     scroll-behavior: smooth;
+}
+
+* {
+    scrollbar-color: var(--color-accent) var(--color-disabled);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: thin;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color-disabled);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
 }
 
 body {
@@ -71,7 +92,7 @@ a:link {
     margin-top: var(--padding-extra-large);
     background-color: var(--color-primary);
     box-shadow: 0 6px 8px var(--color-shadow);
-    border-radius: 16px;
+    border-radius: var(--border-radius);
     padding-bottom: var(--padding-large);
     transition: all 0.5s;
 }
@@ -97,15 +118,19 @@ a:link {
 
 
 .custom-btn-outline {
-    background-color: var(--color-disabled);
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border: thin solid var(--color-accent);
     font-weight: 600;
     width: 100%;
 }
 
-.custom-btn-primary:hover,
-.custom-btn-outline:hover {
+.custom-btn-primary:hover {
     color: var(--color-primary);
+}
+
+.custom-btn-outline:hover {
+    color: var(--color-accent);
 }
 
 

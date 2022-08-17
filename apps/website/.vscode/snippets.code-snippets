@@ -49,6 +49,16 @@
 		],
 		"description": "Add Multiline block in template"
 	},
+	"Add Multiline Macro": {
+		"scope": "html",
+		"prefix": "add-multiline-macro",
+		"body": [
+			"{% macro ${1:block_name}() %}",
+			"",
+			"{% endmacro %}"
+		],
+		"description": "Add Multiline macro in template"
+	},
 	"Include template": {
 		"scope": "html",
 		"prefix": "include-template",
