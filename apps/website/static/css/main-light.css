@@ -139,5 +139,5 @@ a:link {
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
-    padding: var(--padding-large);
+    padding-bottom: var(--padding-extra-large);
 }
