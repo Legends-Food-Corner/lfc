@@ -1,5 +1,11 @@
+window.onload = onBodyLoad;
+
 function hideTopAnnouncement() {
     hide('top-announcement-container');
+}
+
+function onBodyLoad() {
+    $('#modal-offer-of-day').modal('show')
 }
 
 window.onscroll = () => {
