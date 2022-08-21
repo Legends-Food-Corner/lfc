@@ -23,6 +23,7 @@ body {
     margin: 0;
     background: var(--color-primary);
     overflow-x: hidden;
+    color: var(--color-secondary);
 }
 
 .top-announcement-wrapper {
