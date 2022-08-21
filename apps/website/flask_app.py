@@ -1,61 +1,74 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
+appTheme = "light"
 
 
 @app.route("/")
 def home():
-    return render_template("home/home.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("home/home.htm", appTheme=appTheme)
 
 
 @app.route("/login")
 def login():
-    return render_template("login/login.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("login/login.htm", appTheme=appTheme)
 
 
 @app.route("/signup")
 def signup():
-    return render_template("signup/signup.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("signup/signup.htm", appTheme=appTheme)
 
 
 @app.route("/careers")
 def careers():
-    return render_template("careers/careers.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("careers/careers.htm", appTheme=appTheme)
 
 
 @app.route("/contact-us")
 def contact_us():
-    return render_template("contact-us/contact-us.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("contact-us/contact-us.htm", appTheme=appTheme)
 
 
 @app.route("/settings")
 def settings():
-    return render_template("settings/settings.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("settings/settings.htm", appTheme=appTheme)
 
 
 @app.route("/trending-dishes-all")
 def trending_dishes_all():
-    return render_template("trending-dishes-all/trending-dishes-all.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("trending-dishes-all/trending-dishes-all.htm", appTheme=appTheme)
 
 
 @app.route("/trending-shops-all")
 def trending_shops_all():
-    return render_template("trending-shops-all/trending-shops-all.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("trending-shops-all/trending-shops-all.htm", appTheme=appTheme)
 
 
 @app.route("/profile")
 def profile():
-    return render_template("profile/profile.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("profile/profile.htm", appTheme=appTheme)
 
 
 @app.route("/help")
 def help():
-    return render_template("help/help.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("help/help.htm", appTheme=appTheme)
 
 
 @app.route("/logout")
 def logout():
-    return render_template("login/login.htm")
+    appTheme = request.cookies.get('app-theme')
+    return render_template("login/login.htm", appTheme=appTheme)
 
 
 @app.errorhandler(404)

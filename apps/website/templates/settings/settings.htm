@@ -24,17 +24,21 @@ Setting
 
     lc_switch(element);
 
-    let currentTheme = localStorage.getItem("current-theme");
-    if (currentTheme == null || currentTheme == "light") {
-        lcs_off(element);
+    let currentTheme = '{{appTheme}}';
+    if (currentTheme == null || currentTheme == "dark") {
+        lcs_on(element);
     }
     else {
-        lcs_on(element);
+        lcs_off(element);
     }
 
     element.addEventListener('lcs-statuschange', (e) => {
         let newThemeValue = document.getElementById("checkbox-theme").checked ? "dark" : "light";
-        console.log(newThemeValue);
+
+        const d = new Date();
+        d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = "app-theme" + "=" + newThemeValue + ";" + expires + ";path=/";
 
         localStorage.setItem("current-theme", newThemeValue);
 

@@ -10,13 +10,11 @@ function hideTopAnnouncement() {
 }
 
 function onBodyLoad() {
-    setTheme();
+    //setTheme();
     setOfferOfDayModal(CONSTANTS.OFFER_OF_DAY.STATE);
 }
 
 function setTheme() {
-    let styleRef = "css/main-light.css";
-
     let themeSheet = document.getElementById("stylesheet-theme");
 
     let currentTheme = localStorage.getItem("current-theme");

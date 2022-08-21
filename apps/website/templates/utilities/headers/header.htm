@@ -12,7 +12,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="{{ url_for('static', filename='css/extras/flipdown.css') }}">
 
+{% if appTheme=='light' %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main-light.css') }}" id="stylesheet-theme">
+{% else %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main-dark.css') }}" id="stylesheet-theme">
+{% endif %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 
 <script src="{{ url_for('static', filename='javascript/utilities/utilities.js') }}"></script>
