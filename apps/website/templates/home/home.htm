@@ -8,10 +8,15 @@ Home
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home/home.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/utilities/trending-dishes.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/utilities/trending-shops.css') }}">
+<style>
+    body {
+        padding: 0;
+    }
+</style>
 {% endblock %}
 
-{% block body_scripts %}
-
+{% block head_scripts %}
+<script src="{{ url_for('static', filename='javascript/extras/flipdown.js') }}"></script>
 {% endblock %}
 
 {% block content %}

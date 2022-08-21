@@ -1,0 +1,138 @@
+* {
+    scrollbar-color: var(--color-accent) var(--color-disabled);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: thin;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color-disabled);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+}
+
+body {
+    padding: 0;
+    padding-top: var(--padding-body);
+    margin: 0;
+    background: var(--color-primary);
+    overflow-x: hidden;
+}
+
+.top-announcement-wrapper {
+    padding: 12px;
+    font-weight: 600;
+    background-color: var(--color-alert);
+    color: white;
+}
+
+.custom-navbar {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: var(--z-index-navbar);
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    box-shadow: 0 6px 6px var(--color-shadow);
+}
+
+.footer-wrapper {
+    background-color: var(--color-disabled);
+}
+
+.footer-wrapper .condition-wrapper {
+    font-weight: 600;
+}
+
+.footer-wrapper .copyright-wrapper {
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: var(--padding-large);
+    text-align: center;
+    background-color: var(--color-accent);
+}
+
+.scroll-to-top-wrapper a {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    font-size: 48px;
+    color: var(--color-alert);
+    z-index: var(--z-index-to-top);
+}
+
+a,
+a:visited,
+a:active,
+a:link {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.custom-card {
+    margin-top: var(--padding-extra-large);
+    background-color: var(--color-primary);
+    box-shadow: 0 6px 8px var(--color-shadow);
+    border-radius: var(--border-radius);
+    padding-bottom: var(--padding-large);
+    transition: all 0.5s;
+}
+
+.custom-card:hover {
+    box-shadow: 0 6px 16px var(--color-shadow);
+}
+
+.custom-card-body {
+    padding: var(--padding-extra-large);
+}
+
+.custom-card-footer {
+    padding: var(--padding-small) var(--padding-extra-large);
+}
+
+.custom-btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-weight: 600;
+    width: 100%;
+}
+
+
+.custom-btn-outline {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border: thin solid var(--color-accent);
+    font-weight: 600;
+    width: 100%;
+}
+
+.custom-btn-primary:hover {
+    color: var(--color-primary);
+}
+
+.custom-btn-outline:hover {
+    color: var(--color-accent);
+}
+
+
+.div-horizontal-scrolling {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-bottom: var(--padding-extra-large);
+}
+
+.modal-offer-of-day {
+    z-index: var(--z-index-offer-of-day);
+}

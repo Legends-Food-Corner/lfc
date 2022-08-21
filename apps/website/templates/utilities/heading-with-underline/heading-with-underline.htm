@@ -1,4 +1,4 @@
-{% macro heading_with_underline(title="") %}
+{% macro heading_with_underline(title="",showAllLink="") %}
 
 <div class="row">
     <div class="col">
@@ -6,7 +6,7 @@
     </div>
     <div class="col" style="text-align: right;">
         <span>
-            <a href="#">
+            <a href="{{ showAllLink }}">
                 <h6 style="font-weight: 700;display: inline;">Show All</h6>
             </a>
         </span>

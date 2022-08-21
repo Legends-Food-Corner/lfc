@@ -1,0 +1,44 @@
+{% extends 'layout/layout.htm' %}
+
+{% block title %}
+Setting
+{% endblock %}
+
+{% block head_scripts %}
+<script src="{{ url_for('static', filename='javascript/extras/lc_switch.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container">
+        <input type="checkbox" id="checkbox-theme">
+    </div>
+</div>
+
+{% endblock %}
+
+{% block body_scripts %}
+<script>
+    let element = document.querySelector("#checkbox-theme");
+
+    lc_switch(element);
+
+    let currentTheme = localStorage.getItem("current-theme");
+    if (currentTheme == null || currentTheme == "light") {
+        lcs_off(element);
+    }
+    else {
+        lcs_on(element);
+    }
+
+    element.addEventListener('lcs-statuschange', (e) => {
+        let newThemeValue = document.getElementById("checkbox-theme").checked ? "dark" : "light";
+        console.log(newThemeValue);
+
+        localStorage.setItem("current-theme", newThemeValue);
+
+        location.reload();
+    })
+</script>
+{% endblock %}

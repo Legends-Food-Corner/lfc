@@ -33,6 +33,31 @@ def settings():
     return render_template("settings/settings.htm")
 
 
+@app.route("/trending-dishes-all")
+def trending_dishes_all():
+    return render_template("trending-dishes-all/trending-dishes-all.htm")
+
+
+@app.route("/trending-shops-all")
+def trending_shops_all():
+    return render_template("trending-shops-all/trending-shops-all.htm")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile/profile.htm")
+
+
+@app.route("/help")
+def help():
+    return render_template("help/help.htm")
+
+
+@app.route("/logout")
+def logout():
+    return render_template("login/login.htm")
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('utilities/404page/404page.htm'), 404

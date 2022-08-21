@@ -10,7 +10,32 @@ function hideTopAnnouncement() {
 }
 
 function onBodyLoad() {
-    setOfferOfDayModal(true);
+    setTheme();
+    setOfferOfDayModal(CONSTANTS.OFFER_OF_DAY.STATE);
+}
+
+function setTheme() {
+    let styleRef = "css/main-light.css";
+
+    let themeSheet = document.getElementById("stylesheet-theme");
+
+    let currentTheme = localStorage.getItem("current-theme");
+    if (currentTheme != null) {
+        themeSheet.href = `/static/css/main-${currentTheme}.css`;
+    }
+    else {
+        currentTheme = "light";
+        themeSheet.href = `/static/css/main-${currentTheme}.css`;
+    }
+}
+
+function swtichTheme() {
+    let newThemeValue = document.getElementById("checkbox-theme").checked ? "dark" : "light";
+    console.log(newThemeValue);
+
+    localStorage.setItem("current-theme", newThemeValue);
+
+    setTheme();
 }
 
 window.onscroll = () => {

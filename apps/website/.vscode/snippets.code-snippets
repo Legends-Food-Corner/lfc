@@ -15,9 +15,9 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Load Basic Template": {
+	"Extend Basic Template": {
 		"scope": "html",
-		"prefix": "load-basic-template",
+		"prefix": "extend-basic-template",
 		"body": [
 			"{% extends 'layout/layout.htm' %}",
 			"",
@@ -33,7 +33,7 @@
 	},
 	"Add Inline Block": {
 		"scope": "html",
-		"prefix": "add-inline-block",
+		"prefix": "include-inline-block",
 		"body": [
 			"{% block ${1:block_name} %} {% endblock %}"
 		],
@@ -41,7 +41,7 @@
 	},
 	"Add Multiline Block": {
 		"scope": "html",
-		"prefix": "add-multiline-block",
+		"prefix": "include-multiline-block",
 		"body": [
 			"{% block ${1:block_name} %}",
 			"",
@@ -51,7 +51,7 @@
 	},
 	"Add Multiline Macro": {
 		"scope": "html",
-		"prefix": "add-multiline-macro",
+		"prefix": "include-multiline-macro",
 		"body": [
 			"{% macro ${1:block_name}() %}",
 			"",

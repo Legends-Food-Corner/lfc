@@ -27,6 +27,7 @@
 }
 
 .title {
+    margin-top: 54px;
     padding: 24px;
     color: var(--color-primary);
     font-size: 8vw;
