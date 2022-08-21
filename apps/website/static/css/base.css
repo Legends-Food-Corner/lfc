@@ -64,11 +64,11 @@ body {
 }
 
 .scroll-to-top-wrapper a {
+    text-decoration: none;
     position: fixed;
     right: 24px;
     bottom: 24px;
     font-size: 48px;
-    color: var(--color-alert);
     z-index: var(--z-index-to-top);
 }
 

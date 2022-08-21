@@ -8,7 +8,7 @@
 }
 
 .navigate-main-section-wrapper a {
-    color: var(--color-primary);
+    text-decoration: none;
     font-size: 36px;
 }
 
