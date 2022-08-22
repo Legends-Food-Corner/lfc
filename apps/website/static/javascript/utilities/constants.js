@@ -1,5 +1,5 @@
 let CONSTANTS = {
     OFFER_OF_DAY: {
-        STATE: false,
+        STATE: true,
     }
 }

@@ -71,6 +71,12 @@ def logout():
     return render_template("login/login.htm", appTheme=appTheme)
 
 
+@app.route("/menu")
+def menu():
+    appTheme = request.cookies.get('app-theme')
+    return render_template("menu/menu.htm", appTheme=appTheme)
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('utilities/404page/404page.htm'), 404
