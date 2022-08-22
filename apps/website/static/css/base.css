@@ -33,19 +33,14 @@ body {
     color: white;
 }
 
-.custom-navbar {
-    position: fixed;
-    left: 0;
+.navbar {
+    position: sticky;
     width: 100%;
-    height: auto;
     top: 0;
     z-index: var(--z-index-navbar);
-}
-
-.navbar {
     font-weight: 700;
     background-color: var(--color-primary);
-    box-shadow: 0 6px 6px var(--color-shadow);
+    box-shadow: 0 3px 10px 0 var(--color-shadow);
 }
 
 .footer-wrapper {
@@ -85,13 +80,13 @@ a:link {
 .custom-card {
     margin-top: var(--padding-extra-large);
     background-color: var(--color-primary);
-    box-shadow: 0 3px 4px var(--color-shadow);
+    box-shadow: 0 2px 4px 0 var(--color-shadow);
     border-radius: var(--border-radius);
     transition: all 0.5s;
 }
 
 .custom-card:hover {
-    box-shadow: 0 6px 16px var(--color-shadow);
+    box-shadow: 0 3px 9px 0 var(--color-shadow);
 }
 
 .custom-card-body {

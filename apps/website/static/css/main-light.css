@@ -7,14 +7,14 @@
     --color-success: green;
     --color-error: red;
     --color-alert: orange;
-    --color-shadow: #777;
+    --color-shadow: #738f934d;
     --color-disabled: #d3d3d3;
 
     --padding-small: 6px;
     --padding-medium: 12px;
     --padding-large: 16px;
     --padding-extra-large: 24px;
-    --padding-body: 150px;
+    --padding-body: 0px;
 
     --border-radius: 16px;
 
