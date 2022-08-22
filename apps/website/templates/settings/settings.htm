@@ -1,7 +1,7 @@
 {% extends 'layout/layout.htm' %}
 
 {% block title %}
-Setting
+Settings
 {% endblock %}
 
 {% block head_scripts %}
@@ -12,7 +12,18 @@ Setting
 
 <div class="container-fluid">
     <div class="container">
-        <input type="checkbox" id="checkbox-theme">
+        <div class="custom-card">
+            <div class="custom-card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <b>Dark Mode</b>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                        <input type="checkbox" id="checkbox-theme">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

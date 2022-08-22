@@ -43,6 +43,7 @@ body {
 }
 
 .navbar {
+    font-weight: 700;
     background-color: var(--color-primary);
     box-shadow: 0 6px 6px var(--color-shadow);
 }
@@ -80,12 +81,12 @@ a:link {
     text-decoration: none;
 }
 
+/* Custom Card */
 .custom-card {
     margin-top: var(--padding-extra-large);
     background-color: var(--color-primary);
-    box-shadow: 0 6px 8px var(--color-shadow);
+    box-shadow: 0 3px 4px var(--color-shadow);
     border-radius: var(--border-radius);
-    padding-bottom: var(--padding-large);
     transition: all 0.5s;
 }
 
@@ -100,6 +101,8 @@ a:link {
 .custom-card-footer {
     padding: var(--padding-small) var(--padding-extra-large);
 }
+
+
 
 .custom-btn-primary {
     background-color: var(--color-accent);
