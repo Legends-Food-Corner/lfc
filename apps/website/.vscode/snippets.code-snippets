@@ -66,5 +66,13 @@
 			"{% include '${1:template_url}' %}",
 		],
 		"description": "Include template"
+	},
+	"Include asset": {
+		"scope": "html",
+		"prefix": "include-asset",
+		"body": [
+			"{{ url_for('static', filename='${1:URL}') }}",
+		],
+		"description": "Include template"
 	}
 }
