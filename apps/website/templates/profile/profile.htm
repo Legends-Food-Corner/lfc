@@ -5,7 +5,7 @@ Profile
 {% endblock %}
 
 {% block stylesheet %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/profile/profile.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile/style.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -28,7 +28,7 @@ Profile
                             <td>India</td>
                         </tr>
                         <tr>
-                            <td><button class="btn custom-btn-outline">Edit Profile</button></td>
+                            <td><a href="{{ url_for('settings') }}" class="btn custom-btn-outline">Edit Profile</a></td>
                         </tr>
                     </tbody>
                 </table>

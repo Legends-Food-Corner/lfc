@@ -1,7 +1,13 @@
 {% extends 'layout/layout.htm' %}
+{% from "utilities/heading-with-underline/heading-with-underline.htm" import heading_with_underline with context %}
+{% from "utilities/heading-with-toggle/heading-with-toggle.htm" import heading_with_toggle with context %}
 
 {% block title %}
 Settings
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/settings/style.css') }}">
 {% endblock %}
 
 {% block head_scripts %}
@@ -12,14 +18,67 @@ Settings
 
 <div class="container-fluid">
     <div class="container">
-        <div class="custom-card">
-            <div class="custom-card-body">
-                <div class="row">
-                    <div class="col-2">
-                        <b>Dark Mode</b>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="custom-card">
+                    <div class="custom-card-body">
+                        <ul class="settings-sidemenu">
+                            <li>Profile</li>
+                            <li>Appearance</li>
+                            <li>Password</li>
+                            <li>Notifications</li>
+                            <hr>
+                            <li><button class="btn custom-btn-danger"><i class="bi bi-trash3-fill"></i> DELETE
+                                    ACCOUNT</button></li>
+                        </ul>
                     </div>
-                    <div class="col" style="text-align: right;">
-                        <input type="checkbox" id="checkbox-theme">
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <!--Profile-->
+                <div class="row">
+                    <div class="col">
+                        <div class="custom-card">
+                            <div class="custom-card-body">
+                                {{ heading_with_underline("Profile") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Appearance-->
+                <div class="row">
+                    <div class="col">
+                        <div class="custom-card">
+                            <div class="custom-card-body">
+                                {{ heading_with_underline("Appearance") }}
+
+                                {{ heading_with_toggle("Dark Mode","checkbox-theme") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Passwords-->
+                <div class="row">
+                    <div class="col">
+                        <div class="custom-card">
+                            <div class="custom-card-body">
+                                {{ heading_with_underline("Password") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Notifications-->
+                <div class="row">
+                    <div class="col">
+                        <div class="custom-card">
+                            <div class="custom-card-body">
+                                {{ heading_with_underline("Notifications") }}
+
+                                {{ heading_with_toggle("Email","checkbox-notification-email") }}
+                                {{ heading_with_toggle("SMS","checkbox-notification-sms") }}
+                                {{ heading_with_toggle("Whatsapp","checkbox-notification-whatsapp") }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,7 +92,7 @@ Settings
 <script>
     let element = document.querySelector("#checkbox-theme");
 
-    lc_switch(element);
+    lc_switch("input[type=checkbox]");
 
     let currentTheme = '{{appTheme}}';
     if (currentTheme == null || currentTheme == "dark") {
