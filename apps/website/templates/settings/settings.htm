@@ -68,12 +68,15 @@ Settings
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="user-country">Country</label>
-                                                    <select class="selectpicker" id="user-country"
+                                                    <select class="form-control selectpicker" id="user-country"
                                                         data-live-search="true">
-                                                        {% for country in countries %}
-                                                        <option value="{{country}}" data-token="{{country}}">{{country}}
-                                                        </option>
-                                                        {% endfor %}
+                                                        <div style="height:200px;">
+                                                            {% for country in countries %}
+                                                            <option value="{{country}}" data-tokens="{{country}}">
+                                                                {{country}}
+                                                            </option>
+                                                            {% endfor %}
+                                                        </div>
                                                     </select>
                                                 </div>
                                             </div>
