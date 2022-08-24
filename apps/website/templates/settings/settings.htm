@@ -1,6 +1,7 @@
 {% extends 'layout/layout.htm' %}
 {% from "utilities/heading-with-underline/heading-with-underline.htm" import heading_with_underline with context %}
 {% from "utilities/heading-with-toggle/heading-with-toggle.htm" import heading_with_toggle with context %}
+{% from "utilities/modals/confirm/modal.htm" import modal_confirm with context %}
 
 {% block title %}
 Settings
@@ -28,7 +29,8 @@ Settings
                             <li>Password</li>
                             <li>Notifications</li>
                             <hr>
-                            <li><button class="btn custom-btn-danger"><i class="bi bi-trash3-fill"></i> DELETE
+                            <li><button class="btn custom-btn-danger" data-toggle="modal"
+                                    data-target="#modal-delete-account-confirm"><i class="bi bi-trash3-fill"></i> DELETE
                                     ACCOUNT</button></li>
                         </ul>
                     </div>
@@ -44,33 +46,67 @@ Settings
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-group">
-                                            <label for="usr">Name</label>
-                                            <input type="text" class="form-control" id="user-name">
+                                            <label for="user-name">Name</label>
+                                            <input type="text" class="form-control" id="user-name"
+                                                placeholder="Full Name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="pwd">Username</label>
-                                            <input type="text" class="form-control" id="user-username">
+                                            <label for="user-username">Username</label>
+                                            <input type="text" class="form-control" id="user-username"
+                                                placeholder="username">
                                         </div>
                                         <div class="form-group">
-                                            <label for="pwd">Email</label>
-                                            <input type="email" class="form-control" id="user-email">
+                                            <label for="user-email">Email</label>
+                                            <input type="email" class="form-control" id="user-email"
+                                                placeholder="sample@lfc.com">
                                         </div>
                                         <div class="form-group">
-                                            <label for="pwd">DOB</label>
+                                            <label for="user-dob">DOB</label>
                                             <input type="date" class="form-control" id="user-dob">
                                         </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="user-country">Country</label>
+                                                    <select class="selectpicker" id="user-country"
+                                                        data-live-search="true">
+                                                        {% for country in countries %}
+                                                        <option value="{{country}}" data-token="{{country}}">{{country}}
+                                                        </option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="user-state">State</label>
+                                                    <select class="form-control selectpicker" id="user-state"
+                                                        data-live-search="true">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="user-city">City</label>
+                                                    <select class="form-control selectpicker" id="user-city"
+                                                        data-live-search="true">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
-                                            <label for="usr">Address</label>
+                                            <label for="user-address-1">Address</label>
                                             <input type="text" class="form-control" id="user-address-1"
                                                 placeholder="Address Line 1">
-                                            <input type="text" class="form-control" id="user-address-2"
+                                            <input type="text" class="form-control mt-2" id="user-address-2"
                                                 placeholder="Address Line 2">
-                                            <input type="text" class="form-control" id="user-address-3"
+                                            <input type="text" class="form-control mt-2" id="user-address-3"
                                                 placeholder="Address Line 3">
                                         </div>
                                         <div class="form-group">
-                                            <label for="pwd">Landmark</label>
-                                            <input type="text" class="form-control" id="user-address-landmark">
+                                            <label for="user-address-landmark">Landmark</label>
+                                            <input type="text" class="form-control" id="user-address-landmark"
+                                                placeholder="Near XYZ">
                                         </div>
                                         <div class="form-group">
                                             <button class="btn custom-btn-primary">SAVE DETAILS</button>
@@ -101,7 +137,7 @@ Settings
                                 {{ heading_with_underline("Password") }}
 
                                 <div class="form-group">
-                                    <button class="btn custom-btn-danger">CHANGE PASSWORD</button>
+                                    <button class="btn custom-btn-outline">CHANGE PASSWORD</button>
                                 </div>
                             </div>
                         </div>
@@ -125,6 +161,9 @@ Settings
         </div>
     </div>
 </div>
+
+{{ modal_confirm("Do you really want to leave us?","You will not be able to recover your
+account!!","Yes","No","modal-delete-account-confirm") }}
 
 {% endblock %}
 
@@ -154,5 +193,21 @@ Settings
 
         location.reload();
     })
+
+
+    // function getCountriesList() {
+    //     $.get("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json", (res, status) => {
+
+    //         let data = JSON.parse(res);
+
+    //         let s = "["
+    //         data.forEach(element => {
+    //             s = s + "'" + element.name + "',"
+    //         });
+    //         s = s + "]";
+
+    //         console.log(s);
+    //     })
+    // }
 </script>
 {% endblock %}
