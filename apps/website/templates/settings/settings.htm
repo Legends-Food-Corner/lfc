@@ -70,13 +70,11 @@ Settings
                                                     <label for="user-country">Country</label>
                                                     <select class="form-control selectpicker" id="user-country"
                                                         data-live-search="true">
-                                                        <div style="height:200px;">
-                                                            {% for country in countries %}
-                                                            <option value="{{country}}" data-tokens="{{country}}">
-                                                                {{country}}
-                                                            </option>
-                                                            {% endfor %}
-                                                        </div>
+                                                        {% for country in countries %}
+                                                        <option value="{{country}}">
+                                                            {{country}}
+                                                        </option>
+                                                        {% endfor %}
                                                     </select>
                                                 </div>
                                             </div>
@@ -172,9 +170,41 @@ account!!","Yes","No","modal-delete-account-confirm") }}
 
 {% block body_scripts %}
 <script>
-    let element = document.querySelector("#checkbox-theme");
 
-    lc_switch("input[type=checkbox]");
+    $(function () {
+        $("select").select2();
+        lc_switch("input[type=checkbox]");
+    });
+
+    document.getElementById("user-country").onchange = () => {
+        let URL = `/api/v1/${document.getElementById("user-country").value}/states`;
+
+        $.get(URL, (data, status) => {
+            document.getElementById("user-state").innerHTML = getOptionList(data.states);
+        });
+    }
+
+    document.getElementById("user-state").onchange = () => {
+        let URL = `/api/v1/${document.getElementById("user-country").value}/${document.getElementById("user-state").value}/cities`;
+
+        $.get(URL, (data, status) => {
+            document.getElementById("user-city").innerHTML = getOptionList(data.cities);
+        });
+    }
+
+    function getOptionList(data) {
+        let res = ``;
+
+        data.forEach(e => {
+            res = res + `<option value="${e}">${e}</option>`
+        })
+
+        return res;
+    }
+
+
+
+    let element = document.querySelector("#checkbox-theme");
 
     let currentTheme = '{{appTheme}}';
     if (currentTheme == null || currentTheme == "dark") {

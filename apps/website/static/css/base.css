@@ -163,3 +163,9 @@ a:link {
 .modal-offer-of-day {
     z-index: var(--z-index-offer-of-day);
 }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.select2-selection {
+    height: calc(1.5em + .75rem + 2px);
+    padding-top: .375rem .75rem;
+}
