@@ -171,9 +171,10 @@ account!!","Yes","No","modal-delete-account-confirm") }}
 {% block body_scripts %}
 <script>
 
+    lc_switch("input[type=checkbox]");
+
     $(function () {
         $("select").select2();
-        lc_switch("input[type=checkbox]");
     });
 
     document.getElementById("user-country").onchange = () => {
