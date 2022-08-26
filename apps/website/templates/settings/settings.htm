@@ -60,9 +60,20 @@ Settings
                                             <input type="email" class="form-control" id="user-email"
                                                 placeholder="sample@lfc.com">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="user-dob">DOB</label>
-                                            <input type="date" class="form-control" id="user-dob">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="user-dob">DOB</label>
+                                                    <input type="date" class="form-control" id="user-dob">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="user-pincode">Pincode</label>
+                                                    <input type="text" class="form-control" id="user-pincode"
+                                                        placeholder="XXXXXX">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
@@ -180,6 +191,9 @@ account!!","Yes","No","modal-delete-account-confirm") }}
     document.getElementById("user-country").onchange = () => {
         let URL = `/api/v1/${document.getElementById("user-country").value}/states`;
 
+        document.getElementById("user-state").innerHTML = ``;
+        document.getElementById("user-city").innerHTML = ``;
+
         $.get(URL, (data, status) => {
             document.getElementById("user-state").innerHTML = getOptionList(data.states);
         });
@@ -187,6 +201,7 @@ account!!","Yes","No","modal-delete-account-confirm") }}
 
     document.getElementById("user-state").onchange = () => {
         let URL = `/api/v1/${document.getElementById("user-country").value}/${document.getElementById("user-state").value}/cities`;
+        document.getElementById("user-city").innerHTML = ``;
 
         $.get(URL, (data, status) => {
             document.getElementById("user-city").innerHTML = getOptionList(data.cities);
@@ -227,21 +242,5 @@ account!!","Yes","No","modal-delete-account-confirm") }}
 
         location.reload();
     })
-
-
-    // function getCountriesList() {
-    //     $.get("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json", (res, status) => {
-
-    //         let data = JSON.parse(res);
-
-    //         let s = "["
-    //         data.forEach(element => {
-    //             s = s + "'" + element.name + "',"
-    //         });
-    //         s = s + "]";
-
-    //         console.log(s);
-    //     })
-    // }
 </script>
 {% endblock %}

@@ -135,10 +135,16 @@ def getCountries():
 @app.route(PATH_API + "/<country>/states", methods=['GET'])
 def getStatesFromCountry(country):
     if (request.method == 'GET'):
-        res = {
-            "country": country,
-            "states": STATES[country]
-        }
+        if country in STATES:
+            res = {
+                "country": country,
+                "states": STATES[country]
+            }
+        else:
+            res = {
+                "country": country,
+                "states": []
+            }
 
     return jsonify(res)
 
@@ -146,11 +152,18 @@ def getStatesFromCountry(country):
 @app.route(PATH_API + "/<country>/<state>/cities", methods=['GET'])
 def getCitiesFromState(country, state):
     if (request.method == 'GET'):
-        res = {
-            "country": country,
-            "state": state,
-            "cities": CITIES[state]
-        }
+        if state in CITIES:
+            res = {
+                "country": country,
+                "state": state,
+                "cities": CITIES[state]
+            }
+        else:
+            res = {
+                "country": country,
+                "state": state,
+                "cities": []
+            }
 
     return jsonify(res)
 

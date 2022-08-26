@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="{{ url_for('home') }}">LFC</a>
+    <a class="navbar-brand" href="{{ url_for('home') }}"><span id="top-navigation-app-name"></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="color: var(--color-accent);font-size: 24px;"><i
@@ -29,3 +29,7 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    document.getElementById("top-navigation-app-name").innerHTML = CONSTANTS.APP_NAME.FULL_NAME;
+</script>
