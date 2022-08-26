@@ -3,7 +3,7 @@ import json
 
 PATH_API = "/api/v1/"
 
-with open('data/places/countries.json', encoding="utf8") as f:
+with open('/home/207legends/mysite/lfc/apps/website/data/places/countries.json', encoding="utf8") as f:
     dataCountries = json.load(f)
 
 COUNTRIES = []
@@ -11,7 +11,7 @@ COUNTRIES = []
 for i in dataCountries:
     COUNTRIES.append(i["name"])
 
-with open('data/places/states.json', encoding="utf8") as f:
+with open('/home/207legends/mysite/lfc/apps/website/data/places/states.json', encoding="utf8") as f:
     dataStates = json.load(f)
 
 STATES = {}
@@ -25,7 +25,7 @@ for i in dataStates:
         STATES[c].append(s)
 
 
-with open('data/places/cities.json', encoding="utf8") as f:
+with open('/home/207legends/mysite/lfc/apps/website/data/places/cities.json', encoding="utf8") as f:
     dataCities = json.load(f)
 
 CITIES = {}
