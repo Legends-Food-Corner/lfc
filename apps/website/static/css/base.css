@@ -169,3 +169,12 @@ a:link {
     height: calc(1.5em + .75rem + 2px);
     padding-top: .375rem .75rem;
 }
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.center-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
