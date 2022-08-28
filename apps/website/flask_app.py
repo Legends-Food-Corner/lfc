@@ -59,13 +59,13 @@ def home():
 @app.route("/login")
 def login():
     appTheme = request.cookies.get('app-theme')
-    return render_template("login/login.htm", appTheme=appTheme)
+    return render_template("login/login.htm", appTheme=appTheme, errorMsg="Username or Password is wrong")
 
 
 @app.route("/signup")
 def signup():
     appTheme = request.cookies.get('app-theme')
-    return render_template("signup/signup.htm", appTheme=appTheme)
+    return render_template("signup/signup.htm", appTheme=appTheme, errorMsg="Username/Email/Phone already exists")
 
 
 @app.route("/careers")

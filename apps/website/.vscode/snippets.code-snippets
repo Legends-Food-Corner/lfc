@@ -31,6 +31,34 @@
 		],
 		"description": "Load Basic Template for Layout"
 	},
+	"Extend Sidebar Template": {
+		"scope": "html",
+		"prefix": "extend-sidebar-template",
+		"body": [
+			"{% extends 'layout/layout-with-sidebar.htm' %}",
+			"",
+			"{% block title %}",
+			"${1:title}",
+			"{% endblock %}",
+			"",
+			"{% block content_top %}",
+			"",
+			"{% endblock %}",
+			"",
+			"{% block sidebar %}",
+			"",
+			"{% endblock %}",
+			"",
+			"{% block sidecontent %}",
+			"",
+			"{% endblock %}",
+			"",
+			"{% block content_bottom %}",
+			"",
+			"{% endblock %}"
+		],
+		"description": "Load Basic Template for Layout"
+	},
 	"Add Inline Block": {
 		"scope": "html",
 		"prefix": "include-inline-block",
